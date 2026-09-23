@@ -71,26 +71,31 @@ body {
 }
 
 .hero {
+    grid-area: hero;
     border-right: 1px solid var(--color-blue-200);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero__title {
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+    max-width: 11ch;
 }
 
 .hero__text {
     color: var(--color-blue-200);
     font-size: var(--font-size-paragraph);
+    max-width: 38ch;
 }
 
 .footer {
     grid-area: footer;
     border-top: 1px solid var(--color-blue-200);
-}
-
-.hero {
-    grid-area: hero;
 }
 
 .stats {

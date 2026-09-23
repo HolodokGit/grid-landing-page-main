@@ -1,11 +1,49 @@
 @import url('./reset.css');
 @import url('./variables.css');
 
+@font-face {
+    font-family: 'Inter';
+    src: url(../assets/fonts/inter/inter-variable.ttf);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--color-white);
-    background-color: var(--color-blue-600);
+    background-color: var(--color-blue-700);
     min-height: 100vh;
     line-height: 1.5;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    "hero stats";
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.stats {
+    grid-area: stats;
 }

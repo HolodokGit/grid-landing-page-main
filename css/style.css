@@ -10,7 +10,7 @@
 
 body {
     font-family: var(--font-family);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-paragraph);
     color: var(--color-white);
     background-color: var(--color-blue-700);
     min-height: 100vh;
@@ -26,6 +26,40 @@ body {
 
 .header {
     grid-area: header;
+    padding: var(--space-md) var(--space-xl);
+    border-bottom: 1px solid var(--color-blue-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: var(--font-size-small);
+}
+
+.header__logo::before {
+    content: '';
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.header__menu {
+    background-color: var(--color-blue-700);
+    border: none;
+    padding: var(--space-sm);
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.header__menu:hover {
+    background-color: var(--color-blue-400);
 }
 
 .main {
@@ -36,8 +70,23 @@ body {
     grid-area: main;
 }
 
+.hero {
+    border-right: 1px solid var(--color-blue-200);
+}
+
+.hero__title {
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight-medium);
+}
+
+.hero__text {
+    color: var(--color-blue-200);
+    font-size: var(--font-size-paragraph);
+}
+
 .footer {
     grid-area: footer;
+    border-top: 1px solid var(--color-blue-200);
 }
 
 .hero {

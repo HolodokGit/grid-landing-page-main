@@ -169,3 +169,28 @@ body {
     font-size: var(--font-size-small);
 
 }
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "hero"
+        "stats";
+    }
+}
+
+@media (max-width: 444px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat,
+    .hero {
+        min-height: 350px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: start;
+    }
+}
